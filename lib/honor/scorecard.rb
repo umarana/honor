@@ -1,7 +1,7 @@
 module Honor
 
   class Scorecard < ActiveRecord::Base
-    attr_accessible :daily, :lifetime, :monthly, :user_id, :weekly, :yearly, :position
+    # protected_attributes :daily, :lifetime, :monthly, :user_id, :weekly, :yearly, :position
     attr_accessor :position
 
     class << self

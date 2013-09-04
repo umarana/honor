@@ -1,6 +1,6 @@
 module Honor
   class Point < ActiveRecord::Base
-    attr_accessible :category, :message, :user_id, :value
+    # protected_attributes :category, :message, :user_id, :value
 
     after_save :update_scorecard
 
