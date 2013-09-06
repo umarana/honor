@@ -16,6 +16,10 @@ module Honor
       points.where("points.category = ?", category).sum(:value)
     end
   end
+  
+  def lifetime_points()
+     points.where("points.value > ?", 0).sum(:value)
+  end
 
   def points_today(category = nil)
     if category.nil?
